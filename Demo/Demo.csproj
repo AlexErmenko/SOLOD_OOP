@@ -51,6 +51,18 @@
   <ItemGroup>
     <Compile Include="Domain\Parabola.cs" />
     <Compile Include="Domain\Function.cs" />
+    <Compile Include="ElipceForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ElipceForm.Designer.cs">
+      <DependentUpon>ElipceForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HyperbolaForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HyperbolaForm.Designer.cs">
+      <DependentUpon>HyperbolaForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Menu.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -78,6 +90,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="HyperbolaForm.resx">
+      <DependentUpon>HyperbolaForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Main.resx">
       <DependentUpon>Main.cs</DependentUpon>
     </EmbeddedResource>

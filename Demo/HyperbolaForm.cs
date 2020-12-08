@@ -10,16 +10,11 @@ using System.Windows.Forms;
 
 namespace Demo
 {
-    public partial class Start : Form
+    public partial class HyperbolaForm : Form
     {
-        public Start()
+        public HyperbolaForm()
         {
             InitializeComponent();
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            this.Nav(new Menu());
         }
     }
 }

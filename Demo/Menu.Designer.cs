@@ -36,29 +36,31 @@ namespace Demo
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(0, 0);
+            this.button1.Location = new System.Drawing.Point(23, 21);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(196, 47);
             this.button1.TabIndex = 0;
-            this.button1.Text = "button1";
+            this.button1.Text = "Уравнение параболы";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(12, 80);
+            this.button2.Location = new System.Drawing.Point(23, 107);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(196, 47);
             this.button2.TabIndex = 1;
-            this.button2.Text = "button2";
+            this.button2.Text = "Уравнение гиперболы";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(12, 172);
+            this.button3.Location = new System.Drawing.Point(23, 193);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(196, 47);
             this.button3.TabIndex = 2;
-            this.button3.Text = "Parabola";
+            this.button3.Text = "Уравнение элипса";
             this.button3.UseVisualStyleBackColor = true;
             this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
@@ -66,12 +68,13 @@ namespace Demo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(242, 260);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Name = "Menu";
-            this.Text = "Form1";
+            this.Text = "Меню";
+            this.Load += new System.EventHandler(this.Menu_Load);
             this.ResumeLayout(false);
 
         }

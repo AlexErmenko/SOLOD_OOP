@@ -10,16 +10,11 @@ using System.Windows.Forms;
 
 namespace Demo
 {
-    public partial class Start : Form
+    public partial class ElipceForm : Form
     {
-        public Start()
+        public ElipceForm()
         {
             InitializeComponent();
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            this.Nav(new Menu());
         }
     }
 }
