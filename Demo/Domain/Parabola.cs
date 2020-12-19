@@ -79,11 +79,8 @@ namespace Demo.Domain
 
         public override double Solve(double x)
         {
-
             return A * x * x + B * x + C;
         }
-
-
 
     }
 }

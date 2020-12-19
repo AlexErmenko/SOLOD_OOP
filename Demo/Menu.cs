@@ -19,7 +19,7 @@ namespace Demo
 
         private void button3_Click(object sender, EventArgs e)
         {
-            this.Nav(new ElipceForm());
+            this.Nav(new EllipseForm());
         }
 
         private void Menu_Load(object sender, EventArgs e)
