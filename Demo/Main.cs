@@ -35,7 +35,7 @@ namespace Demo
 
             x = -(b / (2 * a));
             var parabola = new Parabola(a, b, c);
-            var y = parabola.Solve(x);
+            var y = parabola.Evaluate(x);
         }
 
         private void hyperbolaRb_CheckedChanged(object sender, EventArgs e)

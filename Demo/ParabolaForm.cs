@@ -29,14 +29,7 @@ namespace Demo
             var arrows = "";
 
 
-            if (a > 0)
-            {
-                arrows = "Вверх";
-            }
-            else
-            {
-                arrows = "Вниз";
-            }
+            arrows = a > 0 ? "Вверх" : "Вниз";
 
             dataGridView1[1, resultCount].Value = a;
             dataGridView1[2, resultCount].Value = b;
@@ -51,7 +44,7 @@ namespace Demo
 
             var parabola = new Parabola(a, b, c);
 
-            var y        = parabola.Solve(x);
+            var y        = parabola.Evaluate(x);
             dataGridView1[5, resultCount].Value = $"({x};{y})";
             resultCount++;
         }

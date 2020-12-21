@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1" MembersFormat="FullSignature">
+  <Class Name="Demo.Domain.Ellipse">
+    <Position X="6.25" Y="3.5" Width="3.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAABAAAAgAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Domain\Ellipse.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Demo.Domain.Function">
+    <Position X="10.5" Y="0.5" Width="3.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAABAAAAgAAAAAAAAAAAAAAoAEAAAA=</HashCode>
+      <FileName>Domain\Function.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Demo.Domain.Parabola">
+    <Position X="15" Y="3.5" Width="3.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAABAAAAgAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Domain\Parabola.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Demo.Domain.Series">
+    <Position X="18.5" Y="0.5" Width="4.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAAAAAAAAgAAAIAAAAAAAACAAAAAAAAACA=</HashCode>
+      <FileName>Domain\Series.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Demo.Domain.Hyperbola">
+    <Position X="10.25" Y="3.5" Width="3.75" />
+    <InheritanceLine Type="Demo.Domain.Function" ManuallyRouted="true">
+      <Path>
+        <Point X="12.25" Y="2.702" />
+        <Point X="12.25" Y="3.5" />
+        <Point X="12.125" Y="3.5" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAABAAAAgAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Domain\Hyperbola.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="JetBrains Mono" Size="9" />
+</ClassDiagram>

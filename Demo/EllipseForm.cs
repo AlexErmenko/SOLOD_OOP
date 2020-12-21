@@ -75,8 +75,8 @@ namespace Demo
             positiveDirectrice.Text = $"x = {a}/{e}";
             var ellipse = new Ellipse(a, b, c);
 
-            var y = ellipse.Solve(negativeDirectriceVal);
-            var y2 = ellipse.Solve(x2);
+            var y = ellipse.Evaluate(negativeDirectriceVal);
+            var y2 = ellipse.Evaluate(x2);
 
             DataGridElipce[1, resultCount].Value = aPow;
             DataGridElipce[2, resultCount].Value = bPow;
