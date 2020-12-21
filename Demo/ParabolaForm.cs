@@ -15,28 +15,50 @@ namespace Demo
             InitializeComponent();
         }
 
+        private void ValidateParams()
+        {
+            if (string.IsNullOrEmpty(ValueATb.Text))
+            {
+                ValueATb.Focus();
+                MessageBox.Show("Помилка значення не може бути відсутнім!");
+            }
+            if (string.IsNullOrEmpty(ValueBTb.Text))
+            {
+                ValueBTb.Focus();
+                MessageBox.Show("Помилка значення не може бути відсутнім!");
+            }
+            if (string.IsNullOrEmpty(ValueCTb.Text))
+            {
+                ValueCTb.Focus();
+                MessageBox.Show("Помилка значення не може бути відсутнім!");
+            }
+
+            return;
+        }
         private void calulateBtn_Click(object sender, EventArgs e)
         {
-            dataGridView1.Rows.Add(1);
-
-            dataGridView1.Rows[resultCount].Cells[0].Value = $"{resultCount}";
-
+            ValidateParams();
 
             //Parabola ideal
             var a = double.Parse(ValueATb.Text);
             var b = double.Parse(ValueBTb.Text);
             var c = double.Parse(ValueCTb.Text);
             var arrows = "";
+            
 
 
             arrows = a > 0 ? "Вверх" : "Вниз";
+
+
+
+            dataGridView1.Rows.Add(1);
+            dataGridView1.Rows[resultCount].Cells[0].Value = $"{resultCount}";
 
             dataGridView1[1, resultCount].Value = a;
             dataGridView1[2, resultCount].Value = b;
             dataGridView1[3, resultCount].Value = c;
             dataGridView1[4, resultCount].Value = arrows;
             
-
             double x = 0;
 
 

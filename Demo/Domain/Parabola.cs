@@ -6,82 +6,35 @@ using System.Threading.Tasks;
 
 namespace Demo.Domain
 {
+    /// <summary>
+    /// Реалізація функції для рівняння параболи
+    /// </summary>
     public class Parabola : Function
     {
-
+        /// <summary>
+        /// Виклик конструктора базового класу для ініціалізації полів
+        /// </summary>
+        /// <param name="a"></param>
+        /// <param name="b"></param>
+        /// <param name="c"></param>
         public Parabola(double a, double b, double c) : base(a, b, c)
         {
         }
 
 
-        // public override double MaxY
-        // {
-        //     get
-        //     {
-        //         if (A < 0)
-        //         {
-        //             return -(B * B - 4 * A * C) / 4 * A;
-        //         }
-        //         else
-        //         {
-        //             return 0;
-        //         }
-        //     }
-        // }
-
-
-        // public override double MinY
-        // {
-        //     get
-        //     {
-        //         if (A > 0)
-        //         {
-        //             return -(B * B - 4 * A * C) / 4 * A;
-        //         }
-        //         else
-        //         {
-        //             return 0;
-        //         }
-        //     }
-        // }
-        //
-        //
-        // public override double MinX
-        // {
-        //     get
-        //     {
-        //         if (A > 0)
-        //         {
-        //             return -B / 2 * A;
-        //         }
-        //         else
-        //         {
-        //             return 0;
-        //         }
-        //     }
-        // }
-        //
-        //
-        // public override double MaxX
-        // {
-        //     get
-        //     {
-        //         if (A < 0)
-        //         {
-        //             return -B / 2 * A;
-        //         }
-        //         else
-        //         {
-        //             return 0;
-        //         }
-        //     }
-        // }
-        //
+        /// <summary>
+        /// Реалізація розрахунку функції параболи для певного - x
+        /// </summary>
+        /// <param name="x">Аргумент методу</param>
+        /// <returns>f(x)</returns>
         public override double Evaluate(double x)
         {
             return A * x * x + B * x + C;
         }
-
+        /// <summary>
+        /// Перевантажений базовий метод для виводу інформації, спецефічної для параболи
+        /// </summary>
+        /// <returns>Характеристики об'єкта</returns>
         public override string ShowInfo()
         {
             var orientGilk = "";
@@ -89,34 +42,31 @@ namespace Demo.Domain
             if (A > 0)
             {
                 orientGilk = "Гілки направлені до гори";
-            }
-
-            if (A == 0)
+            }else if (Math.Abs(A) < 0)
             {
                 orientGilk = "Гілки відсутні";
             }
-
-            if (A < 0)
+            else if (A < 0)
             {
                 orientGilk = "Гілки направлені донизу";
             }
 
-            var D                = (B * B) - 4 * A * C;
+            var d                = (B * B) - 4 * A * C;
             var contactWithXAxis = "";
 
-            if (D > 0)
+            if (d > 0)
             {
-                contactWithXAxis = "перетинає Oc X - 2 рази";
+                contactWithXAxis = "Перетинає Oc X - 2 рази";
             }
 
-            if (D == 0)
+            if (d == 0)
             {
-                contactWithXAxis = "перетинає  Oc X - 1 раз";
+                contactWithXAxis = "Перетинає  Oc X - 1 раз";
             }
 
-            if (D < 0)
+            if (d < 0)
             {
-                contactWithXAxis = "перетинає Oc X - 0 разів";
+                contactWithXAxis = "Перетинає Oc X - 0 разів";
             }
 
 

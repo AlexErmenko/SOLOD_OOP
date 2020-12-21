@@ -31,12 +31,6 @@ namespace Demo
         {
             this.calulateBtn = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.label3 = new System.Windows.Forms.Label();
             this.ValueCTb = new System.Windows.Forms.TextBox();
@@ -47,6 +41,12 @@ namespace Demo
             this.label4 = new System.Windows.Forms.Label();
             this.parabolaDiff = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
@@ -58,7 +58,7 @@ namespace Demo
             this.calulateBtn.Name = "calulateBtn";
             this.calulateBtn.Size = new System.Drawing.Size(227, 47);
             this.calulateBtn.TabIndex = 14;
-            this.calulateBtn.Text = "Расщитать";
+            this.calulateBtn.Text = "Розрахувати";
             this.calulateBtn.UseVisualStyleBackColor = true;
             this.calulateBtn.Click += new System.EventHandler(this.calulateBtn_Click);
             // 
@@ -66,7 +66,7 @@ namespace Demo
             // 
             this.dataGridView1.AllowUserToAddRows = false;
             this.dataGridView1.AllowUserToDeleteRows = false;
-            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.DisplayedCells;
+            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView1.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column1,
@@ -86,48 +86,6 @@ namespace Demo
             this.dataGridView1.Size = new System.Drawing.Size(649, 185);
             this.dataGridView1.TabIndex = 15;
             // 
-            // Column1
-            // 
-            this.Column1.HeaderText = "# Расчёта";
-            this.Column1.Name = "Column1";
-            this.Column1.ReadOnly = true;
-            this.Column1.Width = 97;
-            // 
-            // Column2
-            // 
-            this.Column2.HeaderText = "A";
-            this.Column2.Name = "Column2";
-            this.Column2.ReadOnly = true;
-            this.Column2.Width = 41;
-            // 
-            // Column3
-            // 
-            this.Column3.HeaderText = "B";
-            this.Column3.Name = "Column3";
-            this.Column3.ReadOnly = true;
-            this.Column3.Width = 41;
-            // 
-            // Column4
-            // 
-            this.Column4.HeaderText = "C";
-            this.Column4.Name = "Column4";
-            this.Column4.ReadOnly = true;
-            this.Column4.Width = 41;
-            // 
-            // Column5
-            // 
-            this.Column5.HeaderText = "Направление ветвей";
-            this.Column5.Name = "Column5";
-            this.Column5.ReadOnly = true;
-            this.Column5.Width = 172;
-            // 
-            // Column6
-            // 
-            this.Column6.HeaderText = "Координаты вершины";
-            this.Column6.Name = "Column6";
-            this.Column6.ReadOnly = true;
-            this.Column6.Width = 173;
-            // 
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.label3);
@@ -144,7 +102,7 @@ namespace Demo
             this.groupBox1.Size = new System.Drawing.Size(227, 176);
             this.groupBox1.TabIndex = 16;
             this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Коефициенты уравнения";
+            this.groupBox1.Text = "Коефіцієнти рівняння";
             // 
             // label3
             // 
@@ -210,9 +168,9 @@ namespace Demo
             this.label4.Location = new System.Drawing.Point(400, 23);
             this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(187, 24);
+            this.label4.Size = new System.Drawing.Size(171, 24);
             this.label4.TabIndex = 17;
-            this.label4.Text = "Текущее уравнение";
+            this.label4.Text = "Поточне рівняння";
             // 
             // parabolaDiff
             // 
@@ -234,6 +192,43 @@ namespace Demo
             this.button1.Text = "← До меню ";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // Column1
+            // 
+            this.Column1.HeaderText = "# Розрахунку";
+            this.Column1.Name = "Column1";
+            this.Column1.ReadOnly = true;
+            // 
+            // Column2
+            // 
+            this.Column2.HeaderText = "A";
+            this.Column2.Name = "Column2";
+            this.Column2.ReadOnly = true;
+            // 
+            // Column3
+            // 
+            this.Column3.HeaderText = "B";
+            this.Column3.Name = "Column3";
+            this.Column3.ReadOnly = true;
+            // 
+            // Column4
+            // 
+            this.Column4.HeaderText = "C";
+            this.Column4.Name = "Column4";
+            this.Column4.ReadOnly = true;
+            // 
+            // Column5
+            // 
+            this.Column5.HeaderText = "Напрямок гілки";
+            this.Column5.Name = "Column5";
+            this.Column5.ReadOnly = true;
+            // 
+            // Column6
+            // 
+            this.Column6.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Column6.HeaderText = "Координати вершини";
+            this.Column6.Name = "Column6";
+            this.Column6.ReadOnly = true;
             // 
             // ParabolaForm
             // 
@@ -272,14 +267,14 @@ namespace Demo
         private System.Windows.Forms.TextBox ValueBTb;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox ValueATb;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label parabolaDiff;
+        private System.Windows.Forms.Button button1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label parabolaDiff;
-        private System.Windows.Forms.Button button1;
     }
 }
